@@ -47,7 +47,7 @@ export class ResourceService {
     {
       id: '1',
       title: 'Les relations citoyennes',
-      description: 'Description de l\'article sur les relations citoyennes',
+      description: 'Description de l\'article ',
       content: 'Contenu de l\'article...',
       image_path: '../../../assets/resourceImage/image2.png',
       createdBy: 'Lola CAILLAUD',
@@ -62,7 +62,7 @@ export class ResourceService {
     {
       id: '2',
       title: 'Les relations citoyennes 2',
-      description: 'Description de l\'article sur les relations citoyennes',
+      description: 'Description de l\'article ',
       content: 'Contenu de l\'article...',
       image_path: '../../../assets/resourceImage/image1.jpg',
       createdBy: 'Clément RAFANEAU',
@@ -71,7 +71,7 @@ export class ResourceService {
     {
       id: '3',
       title: 'Les relations citoyennes 3',
-      description: 'Description de l\'article sur les relations citoyennes',
+      description: 'Description de l\'article ',
       content: 'Contenu de l\'article...',
       image_path: '../../../assets/resourceImage/image2.png',
       createdBy: 'Virgile FOUCHE',
@@ -80,7 +80,7 @@ export class ResourceService {
     {
       id: '4',
       title: 'Les relations citoyennes 3',
-      description: 'Description de l\'article sur les relations citoyennes',
+      description: 'Description de l\'article ',
       content: 'Contenu de l\'article...',
       image_path: '../../../assets/resourceImage/image1.jpg',
       createdBy: 'Virgile FOUCHE',
@@ -89,7 +89,7 @@ export class ResourceService {
     {
       id: '6',
       title: 'Les relations citoyennes 3',
-      description: 'Description de l\'article sur les relations citoyennes',
+      description: 'Description de l\'article ',
       content: 'Contenu de l\'article...',
       image_path: '../../../assets/resourceImage/image2.png',
       createdBy: 'Virgile FOUCHE',
@@ -98,7 +98,7 @@ export class ResourceService {
     {
       id: '7',
       title: 'Les relations citoyennes 3',
-      description: 'Description de l\'article sur les relations citoyennes',
+      description: 'Description de l\'article ',
       content: 'Contenu de l\'article...',
       image_path: '../../../assets/resourceImage/image1.jpg',
       createdBy: 'Virgile FOUCHE',
@@ -107,7 +107,7 @@ export class ResourceService {
     {
       id: '8',
       title: 'Les relations citoyennes 3',
-      description: 'Description de l\'article sur les relations citoyennes',
+      description: 'Description de l\'article ',
       content: 'Contenu de l\'article...',
       image_path: '../../../assets/resourceImage/image2.png',
       createdBy: 'Virgile FOUCHE',
