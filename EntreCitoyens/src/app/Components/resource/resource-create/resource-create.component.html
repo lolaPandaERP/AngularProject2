@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>Create Resource</h1>
+  <form (ngSubmit)="createResource()">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" [(ngModel)]="resource.title" name="title" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" [(ngModel)]="resource.description" name="description" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="content">Content</label>
+      <textarea class="form-control" id="content" [(ngModel)]="resource.content" name="content" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="image_path">Image Path</label>
+      <input type="text" class="form-control" id="image_path" [(ngModel)]="resource.image_path" name="image_path">
+    </div>
+    <div class="form-group">
+      <label for="createdBy">Created By</label>
+      <input type="text" class="form-control" id="createdBy" [(ngModel)]="resource.createdBy" name="createdBy" required>
+    </div>
+    <div class="form-group">
+      <label for="createdAt">Created At</label>
+      <input type="text" class="form-control" id="createdAt" [(ngModel)]="resource.createdAt" name="createdAt" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+  </form>
+</div>

@@ -1,0 +1,20 @@
+<div class="category-list">
+  <h2 class="title">Liste des catégories</h2>
+
+  <div *ngIf="categories.length === 0" class="empty-message">
+    Aucune ressource disponible.
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div *ngFor="let category of categories" class="col">
+      <div class="card h-100">
+        <img [src]="category.image_path" alt="Image de l'article" class="card-img-top image">
+        <div class="card-body d-flex flex-column">
+          <h3 class="card-title">{{ category.title }}</h3>
+          <p class="card-text">{{ category.description }}</p>
+          <button (click)="deleteCategory(category.id)" class="btn btn-danger mt-auto">Supprimer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

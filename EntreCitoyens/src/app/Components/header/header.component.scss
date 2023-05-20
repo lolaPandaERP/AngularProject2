@@ -1,0 +1,92 @@
+/* Mobile-first styles */
+.block {
+  display: block;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.bg-red-500 {
+  background-color: #ededed;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.sm\:flex {
+  display: flex;
+}
+
+.sm\:items-center {
+  align-items: center;
+}
+
+.sm\:justify-between {
+  justify-content: space-between;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.text-dark {
+  color: #000000;
+}
+
+#navigation {
+  overflow: hidden;
+  transition-property: height;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+#navigation a {
+  color: #1f1f1f;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+#navigation a:hover {
+  background-color: rgba(62, 62, 62, 0.2);
+}
+
+/* Media query for screens larger than 640px */
+@media (min-width: 640px) {
+  .sm\:hidden {
+    display: none;
+  }
+
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .h-auto {
+    height: auto;
+  }
+
+  .overflow-auto {
+    overflow: auto;
+  }
+}

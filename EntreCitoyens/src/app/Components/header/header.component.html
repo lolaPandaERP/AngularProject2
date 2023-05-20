@@ -1,0 +1,32 @@
+<header class="block w-full bg-red-500 px-4 py-4 sm:flex sm:items-center sm:justify-between">
+  <div class="flex justify-between sm:block">
+      <a [routerLink]="['/']" class="block text-2xl font-bold text-dark">
+        <img src="../../../assets/logo.png" alt="Logo" class="logo-image" width="60px">
+      </a>
+      <h3>EntreCitoyens</h3>
+      <p class="title">La plateforme pour améliorer vos relations ! </p>
+
+      <button class="block bg-transparent sm:hidden">
+          <input class="invisible appearance-none" type="checkbox" id="toggle" />
+
+          <label for="toggle">
+              <i id="menu-icon" class="bx bx-menu cursor-pointer text-2xl text-white"></i>
+              <i id="close-icon" class="bx bx-x hidden cursor-pointer text-2xl text-white"></i>
+          </label>
+      </button>
+  </div>
+
+  <div
+      #linksDiv
+      id="navigation"
+      style="--menu-height: {{ linksDiv.children.length * 2.5 }}rem"
+      class="flex h-0 flex-col items-center gap-4 overflow-hidden text-white transition-all duration-500 ease-in-out sm:h-auto sm:flex-row sm:overflow-auto"
+  >
+          <a [routerLink]="['/login']">Se connecter</a>
+          <a [routerLink]="['/categories']">Les catégories de ressources</a>
+          <a [routerLink]="['/ressources']">Les ressources</a>
+          <a [routerLink]="['/contact']">Contact</a>
+          <!-- for extra links -->
+          <ng-content></ng-content>
+  </div>
+</header>

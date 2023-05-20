@@ -1,0 +1,15 @@
+<div class="resource-details">
+  <h2>Détails de la ressource</h2>
+
+  <div *ngIf="resource" class="resource-info">
+    <h3>{{ resource.title }}</h3>
+    <p>{{ resource.description }}</p>
+    <p>{{ resource.content }}</p>
+    <p>Créé par : {{ resource.createdBy }}</p>
+    <p>Créé le : {{ resource.createdAt }}</p>
+  </div>
+
+  <div *ngIf="!resource" class="empty-message">
+    Ressource introuvable.
+  </div>
+</div>

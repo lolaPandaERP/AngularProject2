@@ -1,0 +1,81 @@
+.resource-list {
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .empty-message {
+    font-style: italic;
+    color: #888;
+    margin-bottom: 20px;
+  }
+
+  .resource-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .resource-image {
+    flex-shrink: 0;
+    margin-right: 20px;
+
+    .article-image {
+      width: 200px;  /* Modifier la valeur selon vos besoins */
+      height: 150px; /* Modifier la valeur selon vos besoins */
+      object-fit: cover; /* Ajustement de l'image pour respecter les dimensions */
+    }
+  }
+
+  .resource-info {
+    flex: 1;
+    margin-right: 20px;
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    p {
+      margin-bottom: 5px;
+    }
+  }
+
+  .resource-actions {
+    flex-shrink: 0;
+
+    a,
+    button {
+      display: inline-block;
+      padding: 5px 10px;
+      margin-left: 10px;
+      font-size: 14px;
+      text-decoration: none;
+      color: #333;
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+
+    button {
+      background-color: #f44336;
+      color: #fff;
+      border-color: #f44336;
+
+      &:hover {
+        background-color: #d32f2f;
+        border-color: #d32f2f;
+      }
+    }
+  }
+}
