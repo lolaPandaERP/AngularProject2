@@ -1,3 +1,4 @@
+<br>
 <div class="resource-list">
   <h2>Liste des ressources</h2>
 
@@ -6,19 +7,25 @@
   </div>
 
   <div *ngFor="let resource of resources" class="resource-item">
-    <div class="resource-image">
-      <img [src]="resource.image_path" alt="Image de l'article" class="article-image">
-    </div>
-    <div class="resource-info">
-      <h3>{{ resource.title }}</h3>
-      <p>{{ resource.description }}</p>
-      <p>Créé par : {{ resource.createdBy }}</p>
-      <p>Créé le : {{ resource.createdAt }}</p>
-    </div>
-    <div class="resource-actions">
-      <a [routerLink]="['/resources/detail/', resource.id]">Voir plus</a>
-      <a [routerLink]="['/resource/share', resource.id]">Partager</a>
-      <button (click)="deleteResource(resource.id)">Supprimer</button>
+    <div class="row">
+      <div class="col-md-4 col-sm-12">
+        <div class="resource-image">
+          <img [src]="resource.image_path" alt="Image de l'article" class="article-image">
+        </div>
+      </div>
+      <div class="col-md-8 col-sm-12">
+        <div class="resource-info">
+          <h3>{{ resource.title }}</h3>
+          <p>{{ resource.description }}</p>
+          <p>Créé par : {{ resource.createdBy }}</p>
+          <p>Créé le : {{ resource.createdAt }}</p>
+        </div>
+        <div class="resource-actions">
+          <a [routerLink]="['/resources/detail/', resource.id]">Voir plus</a>
+          <a [routerLink]="['/resource/share', resource.id]">Partager</a>
+          <button (click)="deleteResource(resource.id)">Supprimer</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

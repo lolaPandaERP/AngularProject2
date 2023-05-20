@@ -1,15 +1,72 @@
-<div class="resource-details">
-  <h2>Détails de la ressource</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="resource-details">
+        <!-- Détails de la ressource -->
+        <h2>Détails de la ressource</h2>
 
-  <div *ngIf="resource" class="resource-info">
-    <h3>{{ resource.title }}</h3>
-    <p>{{ resource.description }}</p>
-    <p>{{ resource.content }}</p>
-    <p>Créé par : {{ resource.createdBy }}</p>
-    <p>Créé le : {{ resource.createdAt }}</p>
-  </div>
+        <div *ngIf="resource" class="resource-info">
+          <!-- Informations sur la ressource -->
+          <h3>{{ resource.title }}</h3>
+          <div class="article-content">
+            <div class="article-image">
+              <img src="../../../../assets/CategoryImage/3.jpg" alt="Image de l'article">
+            </div>
+            <div class="article-text">
+              <!-- Paragraphe de l'article ici -->
+            </div>
+          </div>
+          <p>La cohésion sociale joue un rôle crucial dans la promotion de la santé et du bien-être au sein d'une société. Une étude récente a révélé que des liens sociaux solides et une intégration harmonieuse sont étroitement liés à une meilleure santé mentale et physique des individus. Lorsque les communautés sont unies et que les individus se sentent soutenus et inclus, cela favorise un environnement propice à l'épanouissement individuel et collectif.</p>
+          <p>La cohésion sociale se traduit par des relations interpersonnelles positives, la confiance mutuelle et l'engagement civique. Ces éléments contribuent à réduire les inégalités sociales en permettant l'accès équitable aux ressources et aux services de santé. Lorsque les individus se sentent appartenir à une communauté solidaire, ils sont plus enclins à adopter des comportements sains, tels que l'activité physique régulière, une alimentation équilibrée et la prévention des maladies.
+          <p>En outre, la cohésion sociale renforce la résilience face aux défis de santé publique. Une société unie est mieux équipée pour faire face aux épidémies, car elle favorise la diffusion rapide d'informations précises et la mise en place de mesures de prévention efficaces. Lorsque les membres d'une communauté se soutiennent mutuellement, ils sont plus susceptibles de respecter les directives de santé publique et de prendre des décisions responsables pour protéger la santé de tous.</p>
+          <p>En conclusion, la cohésion sociale et la santé sont étroitement liées. En favorisant des liens sociaux solides, une intégration inclusive et des environnements de soutien, nous créons les conditions nécessaires pour une société en bonne santé et équilibrée. Investir dans la cohésion sociale est donc essentiel pour promouvoir le bien-être individuel et collectif, tout en renforçant la résilience face aux défis sanitaires qui se présentent.</p>
+          <p>Créé par : {{ resource.createdBy }}</p>
+          <p>Créé le : {{ resource.createdAt }}</p>
+        </div>
 
-  <div *ngIf="!resource" class="empty-message">
-    Ressource introuvable.
-  </div>
-</div>
+        <div *ngIf="!resource" class="empty-message">
+          <!-- Message affiché si la ressource est introuvable -->
+          Ressource introuvable.
+        </div>
+
+        <hr class="comment-section-divider">
+
+        <section class="comment-section">
+          <!-- Section des commentaires -->
+          <h3>Commentaires</h3>
+          <!-- Affichage des commentaires ici -->
+          <!-- Utilisez du code Angular pour afficher dynamiquement les commentaires -->
+          <!-- Par exemple, *ngFor="let comment of comments" -->
+          <div class="comment-form">
+            <!-- Formulaire d'ajout de commentaire -->
+            <div class="comment-form">
+              <!-- Formulaire d'ajout de commentaire -->
+              <h4>Ajouter un commentaire</h4>
+              <!-- Formulaire de commentaire -->
+              <form>
+                <div class="form-group">
+                  <label for="name">Nom</label>
+                  <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" id="message" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="resource-list">
+        <!-- Liste des autres articles -->
+        <h3>Autres articles</h3>
+        <ul>
+          <app-resource-list></app-resource-list>
+          <!-- Ajoutez les autres articles ici -->
+        </ul>
+      </div>
+    </div>
