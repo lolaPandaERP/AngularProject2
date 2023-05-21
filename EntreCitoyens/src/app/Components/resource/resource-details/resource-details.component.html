@@ -36,6 +36,8 @@
           <!-- Section des commentaires -->
           <h3>Commentaires</h3>
           <!-- Affichage des commentaires ici -->
+          <p>Commentaires de @Ulg24 : {{ resource.comment }}</p>
+        <br>
           <!-- Utilisez du code Angular pour afficher dynamiquement les commentaires -->
           <!-- Par exemple, *ngFor="let comment of comments" -->
           <div class="comment-form">
@@ -67,7 +69,6 @@
         <h3>Autres articles</h3>
         <ul>
           <app-resource-list></app-resource-list>
-          <!-- Ajoutez les autres articles ici -->
         </ul>
       </div>
     </div>

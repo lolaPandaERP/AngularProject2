@@ -44,6 +44,7 @@ import { ResourceService } from '../../../Services/resource/resource.service';
 })
 export class ResourceShareComponent implements OnInit {
   resourceId: string;
+
   resource: Resource = {
     id: '',
     title: '',
@@ -51,7 +52,8 @@ export class ResourceShareComponent implements OnInit {
     content: '',
     image_path: '',
     createdBy: '',
-    createdAt: ''
+    createdAt: '',
+    comment: '',
   };
 
   constructor(

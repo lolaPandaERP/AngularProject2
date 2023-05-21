@@ -25,7 +25,7 @@
     margin-right: 20px;
 
     .article-image {
-      width: 200px;  /* Modifier la valeur selon vos besoins */
+      width: 150px;  /* Modifier la valeur selon vos besoins */
       height: 150px; /* Modifier la valeur selon vos besoins */
       object-fit: cover; /* Ajustement de l'image pour respecter les dimensions */
     }
@@ -47,6 +47,7 @@
 
   .resource-actions {
     flex-shrink: 0;
+    // margin-left: 20px;
 
     a,
     button {

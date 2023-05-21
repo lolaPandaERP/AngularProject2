@@ -34,8 +34,7 @@
 
 
 import { Injectable } from '@angular/core';
-import { Resource } from '../../DTO/resource';
-import { Comment } from '../../DTO/comment';
+import { Resource } from '../../DTO/resource';;
 import { Observable, of } from 'rxjs';
 
 @Injectable({
@@ -52,12 +51,7 @@ export class ResourceService {
       image_path: '../../../assets/resourceImage/image2.png',
       createdBy: 'Lola CAILLAUD',
       createdAt: '17/05/2023 à 12:10',
-      // comments: [
-      //   {
-      //     idComment: '1',
-      //     text: 'Premier commentaire',
-      //   },
-      // ]
+      comment: 'L\'article est bien écrit',
     },
     {
       id: '2',
@@ -67,6 +61,7 @@ export class ResourceService {
       image_path: '../../../assets/resourceImage/image1.jpg',
       createdBy: 'Clément RAFANEAU',
       createdAt: '17/05/2023 à 12:15',
+      comment: 'Très interessant',
     },
     {
       id: '3',
@@ -75,7 +70,8 @@ export class ResourceService {
       content: 'Contenu de l\'article...',
       image_path: '../../../assets/resourceImage/image2.png',
       createdBy: 'Virgile FOUCHE',
-      createdAt: '17/05/2023 à 12:20'
+      createdAt: '17/05/2023 à 12:20',
+      comment: 'Pertinent, je vous le recommande',
     },
     {
       id: '4',
@@ -84,7 +80,8 @@ export class ResourceService {
       content: 'Contenu de l\'article...',
       image_path: '../../../assets/resourceImage/image1.jpg',
       createdBy: 'Virgile FOUCHE',
-      createdAt: '17/05/2023 à 12:20'
+      createdAt: '17/05/2023 à 12:20',
+      comment: 'Beaucoup de notions, moins pertinent',
     },
     {
       id: '6',
@@ -93,7 +90,8 @@ export class ResourceService {
       content: 'Contenu de l\'article...',
       image_path: '../../../assets/resourceImage/image2.png',
       createdBy: 'Virgile FOUCHE',
-      createdAt: '17/05/2023 à 12:20'
+      createdAt: '17/05/2023 à 12:20',
+      comment: 'Super ! ',
     },
     {
       id: '7',
@@ -102,7 +100,8 @@ export class ResourceService {
       content: 'Contenu de l\'article...',
       image_path: '../../../assets/resourceImage/image1.jpg',
       createdBy: 'Virgile FOUCHE',
-      createdAt: '17/05/2023 à 12:20'
+      createdAt: '17/05/2023 à 12:20',
+      comment: 'Super !',
     },
     {
       id: '8',
@@ -111,7 +110,8 @@ export class ResourceService {
       content: 'Contenu de l\'article...',
       image_path: '../../../assets/resourceImage/image2.png',
       createdBy: 'Virgile FOUCHE',
-      createdAt: '17/05/2023 à 12:20'
+      createdAt: '17/05/2023 à 12:20',
+      comment: 'nul...',
     }
 
   ];
@@ -166,16 +166,16 @@ export class ResourceService {
     return of(false); // La ressource n'a pas été trouvée, le partage a échoué
   }
 
-  addComment(resourceId: string, comment: Comment): Observable<Resource | undefined> {
-    const resource = this.database.find(r => r.id === resourceId);
-    if (resource) {
-      if (!resource.comments) {
-        resource.comments = [];
-      }
-      const newComment = new Comment(comment.id, comment.text);
-      // resource.comments.push(newComment);
-      return of(resource);
-    }
-    return of(undefined);
-  }
+  // addComment(resourceId: string, comment: Comment): Observable<Resource | undefined> {
+  //   const resource = this.database.find(r => r.id === resourceId);
+  //   if (resource) {
+  //     if (!resource.comment) {
+  //       resource.comment = [];
+  //     }
+  //     const newComment = new Comment(comment.id, comment.text);
+  //     // resource.comments.push(newComment);
+  //     return of(resource);
+  //   }
+  //   return of(undefined);
+  // }
 }

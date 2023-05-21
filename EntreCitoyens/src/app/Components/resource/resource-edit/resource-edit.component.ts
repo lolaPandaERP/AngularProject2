@@ -59,6 +59,7 @@ import { ResourceService } from '../../../Services/resource/resource.service';
 })
 export class ResourceEditComponent implements OnInit {
   resourceId: string;
+
   resource: Resource = {
     id: '',
     title: '',
@@ -66,7 +67,8 @@ export class ResourceEditComponent implements OnInit {
     content: '',
     image_path: '',
     createdBy: '',
-    createdAt: ''
+    createdAt: '',
+    comment:'',
   };
 
   constructor(

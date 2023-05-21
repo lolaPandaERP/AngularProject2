@@ -6,5 +6,5 @@ export interface Resource {
   image_path: string;
   createdBy: string;
   createdAt: string;
-  comments?: Comment[];
+  comment: string;
 }
