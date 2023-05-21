@@ -1,23 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './Pages/home/home.component';
-import { NotFoundComponent } from './Pages/not-found/not-found.component';
+import { HomeComponent } from './Public/home/home.component';
+import { NotFoundComponent } from './Public/not-found/not-found.component';
 import { ResourceListComponent } from './Components/resource/resource-list/resource-list.component';
 import { ResourceCreateComponent } from './Components/resource/resource-create/resource-create.component';
 import { ResourceEditComponent } from './Components/resource/resource-edit/resource-edit.component';
 import { ResourceShareComponent } from './Components/resource/resource-share/resource-share.component';
-import { ContactComponent } from './Pages/contact/contact.component';
+import { ContactComponent } from './Public/contact/contact.component';
 import { CategoryListComponent } from './Components/category/category-list/category-list.component';
 import { ResourceDetailsComponent } from './Components/resource/resource-details/resource-details.component';
 import { ResourceTypeComponent } from './Components/resource/resource-type/resource-type.component';
 import { UserProfilComponent } from './Components/user-profil/user-profil.component';
+import { LoginComponent } from './Auth/login/login.component';
+import { MentionlegalesComponent } from './Public/mentionlegales/mentionlegales.component';
+import { RegisterComponent } from './Auth/register/register.component';
 
 const routes: Routes = [
   {
     /**
      * HOMEPAGE
     */
-    path:'',
+    path:'home',
     component:HomeComponent,
   },
 
@@ -36,12 +39,22 @@ const routes: Routes = [
   // LOGIN
   {
     path:'login',
-    component:NotFoundComponent,
+    component:LoginComponent,
+  },
+  // LOGOUT
+  {
+    path:'login',
+    component:LoginComponent,
   },
   // USER PROFIL
   {
     path: 'userProfil',
     component: UserProfilComponent
+  },
+  // S INSCRIRE
+  {
+    path: 'register',
+    component: RegisterComponent
   },
 
   // RESOURCES
@@ -79,6 +92,12 @@ const routes: Routes = [
   {
     path: 'categories',
     component: CategoryListComponent
+  },
+
+  // MENTIONS LEGALES
+  {
+    path: 'legalesmentions',
+    component: MentionlegalesComponent
   },
 
 ];

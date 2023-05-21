@@ -5,8 +5,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
-import { HomeComponent } from './Pages/home/home.component';
-import { NotFoundComponent } from './Pages/not-found/not-found.component';
+import { HomeComponent } from './Public/home/home.component';
+import { NotFoundComponent } from './Public/not-found/not-found.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ResourceCreateComponent } from './Components/resource/resource-create/resource-create.component';
@@ -16,11 +16,15 @@ import { ResourceShareComponent } from './Components/resource/resource-share/res
 import { ResourceService } from './Services/resource/resource.service';
 import { Injectable } from '@angular/core';
 import { SliderComponent } from './Components/slider/slider.component';
-import { ContactComponent } from './Pages/contact/contact.component';
+import { ContactComponent } from './Public/contact/contact.component';
 import { CategoryListComponent } from './Components/category/category-list/category-list.component';
 import { ResourceDetailsComponent } from './Components/resource/resource-details/resource-details.component';
 import { ResourceTypeComponent } from './Components/resource/resource-type/resource-type.component';
 import { UserProfilComponent } from './Components/user-profil/user-profil.component';
+import { LoginComponent } from './Auth/login/login.component';
+import { RegisterComponent } from './Auth/register/register.component';
+import { MentionlegalesComponent } from './Public/mentionlegales/mentionlegales.component';
+import { LogoutComponent } from './Auth/logout/logout.component';
 @Injectable({
   providedIn: 'root'
 })
@@ -43,6 +47,10 @@ import { UserProfilComponent } from './Components/user-profil/user-profil.compon
     ResourceDetailsComponent,
     ResourceTypeComponent,
     UserProfilComponent,
+    LoginComponent,
+    RegisterComponent,
+    MentionlegalesComponent,
+    LogoutComponent,
     // LoginComponent,
   ],
   // Inserer toutes les bibliotheques installées
