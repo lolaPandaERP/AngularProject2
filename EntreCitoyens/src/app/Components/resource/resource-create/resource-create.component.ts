@@ -61,14 +61,14 @@ export class ResourceCreateComponent implements OnInit {
 
   resource: Resource = {
     id: '',
-    title: 'toto',
-    description: 'toto',
-    content: 'toto',
-    image_path: 'toto',
-    createdBy: 'toto',
-    createdAt: 'toto',
-    comment: 'toto',
-    type: 'toto',
+    title: '',
+    description: '',
+    content: '',
+    image_path: '',
+    createdBy: '',
+    createdAt: '',
+    comment: '',
+    type: '',
   };
 
   constructor(
@@ -80,6 +80,7 @@ export class ResourceCreateComponent implements OnInit {
   }
 
   createResource(): void {
+    // Créer la ressource en utilisant les valeurs saisies dans le formulaire
     this.resourceService.createResource(this.resource).subscribe(() => {
       this.router.navigate(['/resources']);
     });
