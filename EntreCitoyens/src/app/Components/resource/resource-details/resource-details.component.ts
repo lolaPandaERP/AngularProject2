@@ -9,6 +9,13 @@ import { Resource } from '../../../DTO/resource';
   styleUrls: ['./resource-details.component.scss']
 })
 export class ResourceDetailsComponent implements OnInit {
+
+   // Slider
+   sliderImages: string[] = [
+    '../../../../assets/resourceImage/image3.png',
+    '../../../../assets/resourceImage/image4.png',
+  ];
+
   resource: Resource | undefined;
 
   constructor(

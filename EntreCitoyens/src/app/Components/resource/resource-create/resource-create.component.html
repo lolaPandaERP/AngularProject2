@@ -1,8 +1,10 @@
+<app-slider [images]="sliderImages"></app-slider>
+<br>
 <div class="container">
-  <h1>Create Resource</h1>
+  <h1>Créer une nouvelle ressource</h1>
   <form (ngSubmit)="createResource()">
     <div class="form-group">
-      <label for="title">Title</label>
+      <label for="title">Titre de la ressource</label>
       <input type="text" class="form-control" id="title" [(ngModel)]="resource.title" name="title" required>
     </div>
     <div class="form-group">
@@ -10,30 +12,34 @@
       <textarea class="form-control" id="description" [(ngModel)]="resource.description" name="description" required></textarea>
     </div>
     <div class="form-group">
-      <label for="content">Content</label>
-      <textarea class="form-control" id="content" [(ngModel)]="resource.content" name="content" required></textarea>
+      <label for="content">Contenu</label>
+      <textarea class="form-control" id="content" [(ngModel)]="resource.content" name="content" ></textarea>
     </div>
     <div class="form-group">
-      <label for="type">Type</label>
+      <label for="type">Veuillez choisir le type de ressource créée</label>
       <select class="form-control" id="type" [(ngModel)]="resource.type" name="type" required>
-        <option value="image">Image</option>
-        <option value="videos">Vidéos</option>
-        <option value="article">Article de blog</option>
-        <option value="type1">Divers</option>
+        <option value="image">Articles / publications </option>
+        <option value="videos">Evenements</option>
+        <option value="article">Images ou vidéos</option>
+        <option value="type1">Documentation et outil</option>
+        <option value="type1">Jeux ludiques</option>
       </select>
     </div>
     <div class="form-group">
-      <label for="image_path">Image Path</label>
+      <label for="image_path">Intégrer votre fichier</label>
       <input type="text" class="form-control" id="image_path" [(ngModel)]="resource.image_path" name="image_path">
     </div>
     <div class="form-group">
-      <label for="createdBy">Created By</label>
+      <label for="createdBy">Créer par</label>
       <input type="text" class="form-control" id="createdBy" [(ngModel)]="resource.createdBy" name="createdBy" required>
     </div>
     <div class="form-group">
-      <label for="createdAt">Created At</label>
+      <label for="createdAt">Créer le </label>
       <input type="text" class="form-control" id="createdAt" [(ngModel)]="resource.createdAt" name="createdAt" required>
     </div>
-    <button type="submit" class="btn btn-primary">Create</button>
+    <br>
+    <div clas="buttonSave">
+      <button type="submit" class="btn btn-primary">Créer la ressource</button>
+    </div>
   </form>
 </div>

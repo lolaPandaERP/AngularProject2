@@ -1,14 +1,20 @@
+<app-slider [images]="sliderImages"></app-slider>
 <div class="resource-type">
   <h2 class="title">Les types de ressources</h2>
+
 
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div *ngFor="let type of types" class="col">
       <div class="card h-100">
         <img [src]="type.image_path" alt="Image du type de ressource" class="card-img-top image">
         <div class="card-body d-flex flex-column">
-          <h3 class="card-title">{{ type.title }}</h3>
+          <a [routerLink]="['/ressources']">
+          <h2 class="card-title">{{ type.title }}</h2></a>
+          <p>{{ type.description }}</p>
         </div>
       </div>
     </div>
   </div>
+
 </div>
+

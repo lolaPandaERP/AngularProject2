@@ -59,6 +59,12 @@ import { categoryService } from 'src/app/Services/cat/category.service';
 })
 
 export class CategoryListComponent implements OnInit {
+
+    // Slider
+    sliderImages: string[] = [
+      '../../../../assets/resourceImage/sante.jpg',
+    ];
+
   categories: Category[] = [];
 
   constructor(private categoryService: categoryService) { }

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class NotFoundComponent {
 
+      // Slider
+      sliderImages: string[] = [
+        '../../../assets/init/404.jpg',
+      ];
+
+
 }

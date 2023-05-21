@@ -1,4 +1,5 @@
 .resource-list {
+
   h2 {
     font-size: 24px;
     font-weight: bold;
@@ -25,7 +26,7 @@
     margin-right: 20px;
 
     .article-image {
-      width: 150px;  /* Modifier la valeur selon vos besoins */
+      width: 150;  /* Modifier la valeur selon vos besoins */
       height: 150px; /* Modifier la valeur selon vos besoins */
       object-fit: cover; /* Ajustement de l'image pour respecter les dimensions */
     }
@@ -113,16 +114,9 @@
       }
     }
 
-    .article-image {
-      /* Styles pour l'image de l'article */
-    }
-
-    .article-title {
-      /* Styles pour le titre de l'article */
-    }
-
-    .article-content {
+    .resource-info {
       /* Styles pour le contenu de l'article */
+
     }
 
     .article-button {

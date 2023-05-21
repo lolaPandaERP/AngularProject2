@@ -8,6 +8,13 @@ import { ResourceService } from '../../../Services/resource/resource.service';
   styleUrls: ['./resource-list.component.scss']
 })
 export class ResourceListComponent implements OnInit {
+
+   // Slider
+   sliderImages: string[] = [
+    '../../../../assets/TypeImage/doc.jpeg',
+    '../../../../assets/resourceImage/sante.jpg.jpg',
+  ];
+
   @Input() resources: Resource[] = [];
 
   filteredResources: Resource[] = [];

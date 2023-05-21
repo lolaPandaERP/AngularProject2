@@ -51,16 +51,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./resource-create.component.scss']
 })
 export class ResourceCreateComponent implements OnInit {
+
+   // Slider
+   sliderImages: string[] = [
+    '../../../assets/resourceImage/image1.jpg',
+    '../../../assets/resourceImage/image2.jpg',
+  ];
+
+
   resource: Resource = {
     id: '',
-    title: '',
-    description: '',
-    content: '',
-    image_path: '',
-    createdBy: '',
-    createdAt: '',
-    comment: '',
-    type: '',
+    title: 'toto',
+    description: 'toto',
+    content: 'toto',
+    image_path: 'toto',
+    createdBy: 'toto',
+    createdAt: 'toto',
+    comment: 'toto',
+    type: 'toto',
   };
 
   constructor(

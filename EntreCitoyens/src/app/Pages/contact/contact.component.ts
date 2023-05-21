@@ -7,6 +7,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+
+  // Slider
+  sliderImages: string[] = [
+    '../../../assets/init/contact.jpg',
+  ];
+
   contactForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {}

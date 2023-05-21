@@ -11,8 +11,8 @@ export class HomeComponent implements OnInit {
 
   // Slider
   sliderImages: string[] = [
-    '../../../assets/image1.jpg',
-    '../../../assets/image2.jpg',
+    '../../../assets/resourceImage/image1.jpg',
+    '../../../assets/resourceImage/image2.jpg',
   ];
 
   resources: Resource[] = [];
