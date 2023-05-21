@@ -23,7 +23,11 @@
         </div>
         <div class="resource-actions">
           <a [routerLink]="['/resources/detail/', resource.id]">Voir plus</a>
-          <a [routerLink]="['/resource/share', resource.id]">Partager</a>
+          <!-- Formulaire de partage de la ressource -->
+          <form (submit)="shareResource(resource)">
+            <button type="submit" class="share-button">Partager</button>
+          </form>
+
           <button (click)="deleteResource(resource.id)">Supprimer</button>
         </div>
       </div>

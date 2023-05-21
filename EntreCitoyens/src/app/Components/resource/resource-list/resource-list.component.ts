@@ -17,6 +17,8 @@ export class ResourceListComponent implements OnInit {
 
   @Input() resources: Resource[] = [];
 
+  resource: Resource | undefined;
+
   filteredResources: Resource[] = [];
   searchTerm: string = '';
 
@@ -47,6 +49,15 @@ export class ResourceListComponent implements OnInit {
         resource.title.toLowerCase().includes(this.searchTerm.toLowerCase())
       );
     }
+  }
+
+  shareResource(resource: Resource): void {
+    const emailSubject = `Partage de la ressource : ${resource.title}`;
+    const emailBody = `Voici la ressource que je souhaite partager :\n\nTitre : ${resource.title}\n\nDescription : ${resource.description}`;
+
+    const emailLink = `mailto:?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
+    window.location.href = emailLink;
   }
 
 }

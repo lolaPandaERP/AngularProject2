@@ -10,13 +10,14 @@ import { Resource } from '../../../DTO/resource';
 })
 export class ResourceDetailsComponent implements OnInit {
 
-   // Slider
-   sliderImages: string[] = [
+  // Slider
+  sliderImages: string[] = [
     '../../../../assets/resourceImage/image3.png',
     '../../../../assets/resourceImage/image4.png',
   ];
 
   resource: Resource | undefined;
+  showCreateForm: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -35,4 +36,26 @@ export class ResourceDetailsComponent implements OnInit {
       this.resource = resource;
     });
   }
+
+  toggleCreateForm(): void {
+    this.showCreateForm = !this.showCreateForm;
+  }
+
+  shareResource(): void {
+    // Vérification si la ressource existe
+    if (!this.resource) {
+      return;
+    }
+
+    // Préparation des données pour partager la ressource
+    const emailSubject = `Partage de la ressource : ${this.resource.title}`;
+    const emailBody = `Voici la ressource que je souhaite partager :\n\nTitre : ${this.resource.title}\n\nContenu : ${this.resource.content}`;
+
+    // Exemple d'implémentation de l'envoi de la ressource par e-mail
+    const emailLink = `mailto:?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
+    // Redirection vers l'application de messagerie par défaut avec le lien de partage
+    window.location.href = emailLink;
+  }
+
 }

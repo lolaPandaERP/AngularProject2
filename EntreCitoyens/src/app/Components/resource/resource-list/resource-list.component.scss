@@ -135,4 +135,28 @@
       }
     }
   }
+
+  .resource-actions{
+    display: flex;
+    flex-direction: column;
+
+    /* Styles spécifiques pour les petits écrans */
+    @media (min-width: 576px) {
+      flex-direction: row;
+      justify-content: space-between;
+
+      button {
+        margin-top: 0; /* Réinitialise la marge supérieure pour les boutons */
+      }
+    }
+
+    .share-button {
+      background-color: #e6c09c; /* Remplacez par la couleur de votre choix */
+      color: #242424; /* Couleur du texte */
+      border-color: #e7e7e7;
+      /* Autres styles CSS souhaités pour le bouton */
+    }
+  }
+
+
 }

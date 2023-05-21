@@ -59,7 +59,17 @@
                 <button type="submit" class="btn btn-primary">Envoyer</button>
               </form>
               <br>
-              <button type="submit" class="btn btn-primary">Partager</button>
+              <div>
+                <h4>Partager la ressource</h4>
+                <!-- Formulaire de partage de la ressource -->
+                <form (submit)="shareResource()">
+                  <!-- Champs du formulaire -->
+                  <!-- Utilisez [(ngModel)] pour lier les valeurs à une propriété de resource -->
+                  <!-- Ajoutez des validations et des attributs requis si nécessaire -->
+
+                  <button type="submit" class="btn btn-primary">Partager</button>
+                </form>
+              </div>
             </div>
           </div>
         </section>
