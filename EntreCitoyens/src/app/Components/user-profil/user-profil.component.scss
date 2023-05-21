@@ -1,0 +1,63 @@
+.profile-container {
+    .profile-banner {
+      // Styles pour la bannière décorative
+    }
+
+    .profile-info {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+
+      .profile-image {
+        // Styles pour la photo de profil
+      }
+
+      .profile-content {
+        margin-left: 20px;
+
+        h2 {
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        // Styles pour les informations du profil
+      }
+    }
+
+    .resources-section {
+      margin-top: 40px;
+
+      h3 {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      // Styles pour la liste des ressources de l'utilisateur
+    }
+
+    .dashboard-section {
+      margin-top: 40px;
+
+      h3 {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      // Styles pour le tableau de bord
+    }
+
+    .profile-content {
+      h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .profile-details {
+        p {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+  }

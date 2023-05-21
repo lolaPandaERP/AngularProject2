@@ -10,6 +10,7 @@ import { ContactComponent } from './Pages/contact/contact.component';
 import { CategoryListComponent } from './Components/category/category-list/category-list.component';
 import { ResourceDetailsComponent } from './Components/resource/resource-details/resource-details.component';
 import { ResourceTypeComponent } from './Components/resource/resource-type/resource-type.component';
+import { UserProfilComponent } from './Components/user-profil/user-profil.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,11 @@ const routes: Routes = [
   {
     path:'login',
     component:NotFoundComponent,
+  },
+  // USER PROFIL
+  {
+    path: 'userProfil',
+    component: UserProfilComponent
   },
 
   // RESOURCES

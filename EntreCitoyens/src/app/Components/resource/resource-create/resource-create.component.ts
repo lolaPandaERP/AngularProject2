@@ -54,8 +54,7 @@ export class ResourceCreateComponent implements OnInit {
 
    // Slider
    sliderImages: string[] = [
-    '../../../assets/resourceImage/image1.jpg',
-    '../../../assets/resourceImage/image2.jpg',
+    '../../../../assets/resourceImage/image2.png',
   ];
 
 
