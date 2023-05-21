@@ -19,6 +19,7 @@ import { SliderComponent } from './Components/slider/slider.component';
 import { ContactComponent } from './Pages/contact/contact.component';
 import { CategoryListComponent } from './Components/category/category-list/category-list.component';
 import { ResourceDetailsComponent } from './Components/resource/resource-details/resource-details.component';
+import { ResourceTypeComponent } from './Components/resource/resource-type/resource-type.component';
 @Injectable({
   providedIn: 'root'
 })
@@ -39,6 +40,7 @@ import { ResourceDetailsComponent } from './Components/resource/resource-details
     ContactComponent,
     CategoryListComponent,
     ResourceDetailsComponent,
+    ResourceTypeComponent,
     // LoginComponent,
   ],
   // Inserer toutes les bibliotheques installées

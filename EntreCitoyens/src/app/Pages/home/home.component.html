@@ -12,7 +12,7 @@
 
   <section class="popupCreation">
     <!-- Bouton pour ouvrir la fenêtre modale -->
-    <button (click)="openModal()" class="btn btn-secondary">Creer une nouvelle ressource</button>
+    <a [routerLink]="['/resourceCreate']"><button href class="btn btn-secondary">Creer une nouvelle ressource</button></a>
   </section>
 
   <!-- Fenêtre modale pour la création de ressource -->
@@ -36,15 +36,15 @@
       <nav class="my-4" aria-label="...">
         <ul class="pagination pagination-circle justify-content-center">
           <li class="page-item">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Précédent</a>
           </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item active" aria-current="page">
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item" aria-current="page">
             <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
           </li>
           <li class="page-item"><a class="page-link" href="#">3</a></li>
           <li class="page-item">
-            <a class="page-link" href="#">Next</a>
+            <a class="page-link" href="#">Suivant</a>
           </li>
         </ul>
       </nav>

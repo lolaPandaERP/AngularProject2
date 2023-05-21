@@ -52,6 +52,7 @@ export class ResourceService {
       createdBy: 'Lola CAILLAUD',
       createdAt: '17/05/2023 à 12:10',
       comment: 'L\'article est bien écrit',
+      type: '',
     },
     {
       id: '2',
@@ -62,6 +63,7 @@ export class ResourceService {
       createdBy: 'Clément RAFANEAU',
       createdAt: '17/05/2023 à 12:15',
       comment: 'Très interessant',
+      type: 'Article',
     },
     {
       id: '3',
@@ -72,6 +74,7 @@ export class ResourceService {
       createdBy: 'Virgile FOUCHE',
       createdAt: '17/05/2023 à 12:20',
       comment: 'Pertinent, je vous le recommande',
+      type: 'Article',
     },
     {
       id: '4',
@@ -82,6 +85,7 @@ export class ResourceService {
       createdBy: 'Virgile FOUCHE',
       createdAt: '17/05/2023 à 12:20',
       comment: 'Beaucoup de notions, moins pertinent',
+      type: 'Article',
     },
     {
       id: '6',
@@ -92,6 +96,7 @@ export class ResourceService {
       createdBy: 'Virgile FOUCHE',
       createdAt: '17/05/2023 à 12:20',
       comment: 'Super ! ',
+      type: 'Article',
     },
     {
       id: '7',
@@ -102,6 +107,7 @@ export class ResourceService {
       createdBy: 'Virgile FOUCHE',
       createdAt: '17/05/2023 à 12:20',
       comment: 'Super !',
+      type: 'Article',
     },
     {
       id: '8',
@@ -112,6 +118,7 @@ export class ResourceService {
       createdBy: 'Virgile FOUCHE',
       createdAt: '17/05/2023 à 12:20',
       comment: 'nul...',
+      type: 'Article',
     }
 
   ];

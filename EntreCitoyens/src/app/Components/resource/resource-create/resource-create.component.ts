@@ -59,7 +59,8 @@ export class ResourceCreateComponent implements OnInit {
     image_path: '',
     createdBy: '',
     createdAt: '',
-    comment: ''
+    comment: '',
+    type: '',
   };
 
   constructor(

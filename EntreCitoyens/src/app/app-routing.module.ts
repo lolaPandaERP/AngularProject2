@@ -9,6 +9,7 @@ import { ResourceShareComponent } from './Components/resource/resource-share/res
 import { ContactComponent } from './Pages/contact/contact.component';
 import { CategoryListComponent } from './Components/category/category-list/category-list.component';
 import { ResourceDetailsComponent } from './Components/resource/resource-details/resource-details.component';
+import { ResourceTypeComponent } from './Components/resource/resource-type/resource-type.component';
 
 const routes: Routes = [
   {
@@ -39,8 +40,16 @@ const routes: Routes = [
 
   // RESOURCES
   {
+    path: 'resourceCreate',
+    component: ResourceCreateComponent
+  },
+  {
     path: 'ressources',
     component: ResourceListComponent
+  },
+  {
+    path: 'types',
+    component: ResourceTypeComponent
   },
   // details
   {

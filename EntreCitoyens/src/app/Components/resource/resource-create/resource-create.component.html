@@ -14,6 +14,15 @@
       <textarea class="form-control" id="content" [(ngModel)]="resource.content" name="content" required></textarea>
     </div>
     <div class="form-group">
+      <label for="type">Type</label>
+      <select class="form-control" id="type" [(ngModel)]="resource.type" name="type" required>
+        <option value="image">Image</option>
+        <option value="videos">Vidéos</option>
+        <option value="article">Article de blog</option>
+        <option value="type1">Divers</option>
+      </select>
+    </div>
+    <div class="form-group">
       <label for="image_path">Image Path</label>
       <input type="text" class="form-control" id="image_path" [(ngModel)]="resource.image_path" name="image_path">
     </div>

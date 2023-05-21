@@ -54,6 +54,7 @@ export class ResourceShareComponent implements OnInit {
     createdBy: '',
     createdAt: '',
     comment: '',
+    type: '',
   };
 
   constructor(

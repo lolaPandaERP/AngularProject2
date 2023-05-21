@@ -69,6 +69,7 @@ export class ResourceEditComponent implements OnInit {
     createdBy: '',
     createdAt: '',
     comment:'',
+    type: '',
   };
 
   constructor(
