@@ -1,1 +1,0 @@
-{"ast":null,"code":"export class Skill {}","map":{"version":3,"mappings":"AAAA,OAAM,MAAOA,KAAK","names":["Skill"],"sourceRoot":"","sources":["C:\\laragon\\www\\angular\\AngularProject\\src\\app\\DTO\\skill.model.ts"],"sourcesContent":["export class Skill {\r\n  id:number;\r\n  name:string;\r\n}\r\n"]},"metadata":{},"sourceType":"module","externalDependencies":[]}

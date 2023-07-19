@@ -1,24 +1,12 @@
-# build stage
-FROM node:lts-alpine as build-stage
-RUN mkdir /app
-WORKDIR /app
-COPY package*.json ./
-
+# Etape 1 : Builder l'application Angular
+FROM node:18 AS build
+WORKDIR /usr/src/app
+COPY package.json package-lock.json ./
 RUN npm install
-RUN npm install -g @angular/cli
-
-# Copie les fichiers et dossiers du projet dans le conteneur Docker
 COPY . .
+RUN npm run build --prod
 
-# Construit l'application pour la production
-RUN ng build
-
-# production stage
-FROM nginx:stable-alpine as production-stage
-COPY --from=build-stage /app/dist /usr/share/nginx/html
-# Alter Nginx to receive traffic on 8080 instead. Refer below explaination
-# App Engine only support port 8080
-COPY --from=build-stage /app/deployment/default.conf /etc/nginx/conf.d/default.conf
-# Expose container port 8080
-EXPOSE 8080
-CMD ["nginx", "-g", "daemon off;"] 
+# Etape 2 : Servir l'application avec Nginx
+FROM nginx:1.17.1-alpine
+COPY --from=build /usr/src/app/dist/angular-project /usr/share/nginx/html
+COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
